@@ -26,7 +26,8 @@ export default function Services() {
 
   return (
     <section className="services">
-      <div className="services__header">
+      <div className="container">
+      <div className="services__header"> </div>
         <div>
           <span className="services__eyebrow">Послуги</span>
           <h2 className="services__title">Що ми робимо</h2>

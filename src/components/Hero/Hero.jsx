@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero__content">
+      <div className="hero__content"> 
         <span className="hero__eyebrow">Студія манікюру</span>
         <h1 className="hero__title">
           Краса у деталях,

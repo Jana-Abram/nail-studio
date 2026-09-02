@@ -41,25 +41,25 @@
 }
 
 .before-after__row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
+  position: relative;
 }
 
 .before-after__nav {
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 36px;
   height: 36px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
-  background: none;
+  background: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--color-text);
   transition: background 0.2s, color 0.2s;
+  z-index: 2;
 }
 
 .before-after__nav:hover {
@@ -68,30 +68,38 @@
   color: #FFFFFF;
 }
 
-.before-after__track {
-  display: flex;
-  gap: 50px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  justify-content: center;
-  flex: 1;
+.before-after__nav--prev {
+  left: -56px;
 }
 
-.before-after__track::-webkit-scrollbar {
+.before-after__nav--next {
+  right: -56px;
+}
+
+.before-after__track {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.before-after__row::-webkit-scrollbar {
   display: none;
 }
 
 .before-after__pair {
   display: flex;
-  flex-shrink: 0;
+  flex: 1;
   gap: 8px;
+  min-width: 0;
   border-radius: 4px;
   overflow: hidden;
 }
 
+
 .before-after__photo {
   position: relative;
-  width: 160px;
+  flex: 1;
+  min-width: 0;
   aspect-ratio: 3 / 4;
   background: var(--color-surface);
   overflow: hidden;

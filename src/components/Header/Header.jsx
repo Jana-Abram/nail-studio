@@ -13,6 +13,7 @@ export default function Header() {
 
   return (
     <header className="header">
+       
       <div className="header__logo">
         NAIL STUDIO <Sparkle size={14} strokeWidth={2} className="header__logo-icon" />
       </div>
